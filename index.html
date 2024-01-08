@@ -1,0 +1,1028 @@
+<html>
+    <head>
+        <title>
+            Film Mueseum
+        </title>
+        <link rel="icon" href="icon.jpg">
+        <script>
+            var question;
+            var correctAnswer;
+            var pointCounter = 0;
+            var isAnswered = [0, 0, 0, 0, 0, 0]; // 0 = not answered, 1 = answered
+            var whichQuestion = 0;
+            function exhibitDescriptionSet(exhibit)
+            {
+                document.getElementById("exhibitDescriptionContainer").style.display = "block";
+                document.getElementById("exhibitDescription").style.display = "block";
+                document.getElementById("triviaContainer").style.display = "none";
+                switch (exhibit)
+                {
+                    case 1:
+                        document.getElementById("exhibitDescription").innerHTML = "In this shot, A Factory Worker is taking a bathroom break to smoke a cigarette. However, he is interrupted by the owner of the factory, who is able to see and yell at workers in the bathroom from his desk. This shows the lack of rights and privacy for workers during the depression. Furthermore, the bars on the windows show how factories were trapping and enslaving workers. Finally, the fact that A Factory Worker had to clock out to take a short break shows how poorly workers were treated, as if to do something basic and fundamental to life like going to the bathroom, they must clock out so they are not paid to do so and are thus encouraged to not go at all.";
+                        break;
+                    case 2:
+                        document.getElementById("exhibitDescription").innerHTML = "In this shot, Kong is climbing the Empire State Building with Ann Darrow to escape his captors. The fact that Kong climbs the Empire State Building is a comparison to the Harlem Renaissance, and how Blacks were supposedly invading and conquering white society, just like how Kong does when he climbs the Empire State Building.";
+                        break;
+                    case 3:
+                        document.getElementById("exhibitDescription").innerHTML = "In this scene, Spike Lee conveys his own ideology regarding the constant struggle between love and hate by breaking the fourth wall to tell Radio Raheem’s story of love and hate directly to the viewer, through Radio Raheem’s ironic and arguably hypocritical actions. Raheem tells the story of love and hate, in which he claims that love wins in the end, however Raheem is hypocritical by saying this, as he constantly plays hateful song, " + "<i>" + "Fight the Power" + "</i>" + ", and is one the catalysts for the violence at the end of the film.";
+                        break;
+                    case 4:
+                        document.getElementById("exhibitDescription").innerHTML = "In this shot, the meaning behind Charles Foster Kane's last word, 'Rosebud,' is revealed. It unveils the tragedy of Kane's life, a man who spent his time on Earth in a constant search of happiness, whether it be through relationships or material goods. However, he never realizes what will make him happy, which is to be an innocent child living with his parents again, until he is on his deathbed.";
+                        break;
+                    case 5:
+                        document.getElementById("exhibitDescription").innerHTML = "In this scene, Michael takes his first step down the path towards his family and a life of crime. From the beginning of the film, Michael was supposed to be the one family member different from the rest, but in this scene, he becomes the opposite, and becomes on track to lead the family business rather than stay out of it. The screeching train noises during this scene symbolize Michael's indecision, as if he goes through with the plan, the life he is currently heading towards will stop, and start to move in the opposite direction, towards crime.";
+                        break;
+                    case 6:
+                        document.getElementById("exhibitDescription").innerHTML = "In this shot, Ki-woo and Ki-jung are searching for Wi-Fi. The greenish tinted filter is used to emphasize how disgusting the Kim's home is. Furthermore, the fact that the Kim's toilet has to be raised above the floor shows how they are at the bottom of the socio-economic ladder. The plumbing of the building they live in does not allow for there to be toilets below a certain point, so the placement of their toilet shows they literally can not be any lower in society.";
+                        break;
+                }
+            }
+            function triviaQuestion(exhibit)
+            {
+                question = Math.floor(Math.random() * 3) + 1;
+                if (isAnswered[exhibit - 1] == 1)
+                    {
+                        document.getElementById("correctIncorrectbox").innerHTML = "This question has already been answered";
+                    }
+                else
+                    {
+                        document.getElementById("correctIncorrectbox").innerHTML = "";
+                    }
+                switch (exhibit)
+                {
+                    case 1:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "This is a _________ shot."
+                                 + "<br>" + "<br>"
+                                 + "A: Master"
+                                 + "<br>" + "<br>"
+                                 + "B: Extreme Long"
+                                 + "<br>" + "<br>"
+                                 + "C: Close-Up"
+                                 + "<br>" + "<br>"
+                                 + "D: Aerial";
+                                correctAnswer = 1;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "The bars on the window symbolize __________."
+                                 + "<br>" + "<br>"
+                                 + "A: How factories are prisons"
+                                 + "<br>" + "<br>"
+                                 + "B: How workers during the depression were trapped and enslaved by factories"
+                                 + "<br>" + "<br>"
+                                 + "C: Architectural statements made during the depression"
+                                 + "<br>" + "<br>"
+                                 + "D: Window diversity";
+                                 correctAnswer = 2;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "To take a bathroom break, A Factory Worker needed to _________, showing how poor working conditions were during the depression."
+                                 + "<br>" + "<br>"
+                                 + "A: Walk a mile to get to the other side of the factory"
+                                 + "<br>" + "<br>"
+                                 + "B: Work for nine consecutive hours"
+                                 + "<br>" + "<br>"
+                                 + "C: Take his lunch break"
+                                 + "<br>" + "<br>"
+                                 + "D: Clock out";
+                                 correctAnswer = 4;
+                                break;
+                        }
+                        break;
+                    
+                    case 2:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "This is a _________ shot."
+                                 + "<br>" + "<br>"
+                                 + "A: Medium"
+                                 + "<br>" + "<br>"
+                                 + "B: Medium Close-Up"
+                                 + "<br>" + "<br>"
+                                 + "C: Long"
+                                 + "<br>" + "<br>"
+                                 + "D: Medium Long";
+                                correctAnswer = 3;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "Kong climbing the Empire State Building is reference to __________."
+                                 + "<br>" + "<br>"
+                                 + "A: How tall skyscrapers were getting in the 1930s"
+                                 + "<br>" + "<br>"
+                                 + "B: The weakness of the US Army as they are unable to stop Kong from climbing the building"
+                                 + "<br>" + "<br>"
+                                 + "C: That monkeys are good climbers"
+                                 + "<br>" + "<br>"
+                                 + "D: African-Americans (supposedly) conquering and taking over white society";
+                                 correctAnswer = 4;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "Kong travels to New York City because __________."
+                                 + "<br>" + "<br>"
+                                 + "A: He swam there"
+                                 + "<br>" + "<br>"
+                                 + "B: He is captured and transported to be put on display"
+                                 + "<br>" + "<br>"
+                                 + "C: He fell from outer space"
+                                 + "<br>" + "<br>"
+                                 + "D: He took over a boat and used it to travel to America";
+                                 correctAnswer = 2;
+                                break;
+                        }
+                        break;
+
+                    case 3:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot is a __________ shot from __________'s perspective."
+                                 + "<br>" + "<br>"
+                                 + "A: Low Angle, Mookie"
+                                 + "<br>" + "<br>"
+                                 + "B: Close-Up, Buggin' Out"
+                                 + "<br>" + "<br>"
+                                 + "C: POV, Mookie"
+                                 + "<br>" + "<br>"
+                                 + "D: High Angle, Sal";
+                                correctAnswer = 3;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot is a __________ shot of __________."
+                                 + "<br>" + "<br>"
+                                 + "A: Extreme Close-Up, Da Mayor"
+                                 + "<br>" + "<br>"
+                                 + "B: Medium Close-Up, Radio Raheem"
+                                 + "<br>" + "<br>"
+                                 + "C: Extreme Long Shot, Mookie"
+                                 + "<br>" + "<br>"
+                                 + "D: Long Shot, Smiley";
+                                 correctAnswer = 2;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot is from a movie directed and starred by __________."
+                                 + "<br>" + "<br>"
+                                 + "A: Steven Spielberg"
+                                 + "<br>" + "<br>"
+                                 + "B: Alfred Hitchcock"
+                                 + "<br>" + "<br>"
+                                 + "C: Tim Burton"
+                                 + "<br>" + "<br>"
+                                 + "D: Spike Lee";
+                                 correctAnswer = 4;
+                                break;
+                        }
+                        break;
+
+                    case 4:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot reveals the meaning of Kane's last word, __________."
+                                 + "<br>" + "<br>"
+                                 + "A: 'Sled'"
+                                 + "<br>" + "<br>"
+                                 + "B: 'Rosebud'"
+                                 + "<br>" + "<br>"
+                                 + "C: 'Home'"
+                                 + "<br>" + "<br>"
+                                 + "D: 'Love'";
+                                correctAnswer = 2;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "This is a slight __________ shot."
+                                 + "<br>" + "<br>"
+                                 + "A: Extreme Long Shot"
+                                 + "<br>" + "<br>"
+                                 + "B: Canted-Angle"
+                                 + "<br>" + "<br>"
+                                 + "C: Low-Angle"
+                                 + "<br>" + "<br>"
+                                 + "D: High-Angle";
+                                correctAnswer = 4;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot is from a movie directed and starred by __________."
+                                 + "<br>" + "<br>"
+                                 + "A: Orson Welles"
+                                 + "<br>" + "<br>"
+                                 + "B: Alfred Hitchcock"
+                                 + "<br>" + "<br>"
+                                 + "C: Tim Burton"
+                                 + "<br>" + "<br>"
+                                 + "D: Spike Lee";
+                                 correctAnswer = 1;
+                                break;
+                        }
+                        break;
+
+                    case 5:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "In this shot, __________ and __________ are killed by Michael Corleone."
+                                 + "<br>" + "<br>"
+                                 + "A: Clemenza, Barzini"
+                                 + "<br>" + "<br>"
+                                 + "B: Moe Greene, Luca Brasi"
+                                 + "<br>" + "<br>"
+                                 + "C: Sollozzo, Officer McCluskey"
+                                 + "<br>" + "<br>"
+                                 + "D: Tom Hagen, Jack Woltz";
+                                correctAnswer = 3;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "This scene is a turning point in the film, as __________."
+                                 + "<br>" + "<br>"
+                                 + "A: Michael quits the family business for good"
+                                 + "<br>" + "<br>"
+                                 + "B: The rival families stop fighting"
+                                 + "<br>" + "<br>"
+                                 + "C: Michael has a nice dinner"
+                                 + "<br>" + "<br>"
+                                 + "D: It marks Michael's descent into the family business of crime";
+                                 correctAnswer = 4;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "In this scene, the viewer hears __________, which symbolize(s) Michael's internal struggle."
+                                 + "<br>" + "<br>"
+                                 + "A: A pack of wolves"
+                                 + "<br>" + "<br>"
+                                 + "B: A train screeching to a stop"
+                                 + "<br>" + "<br>"
+                                 + "C: Thunder and lightning"
+                                 + "<br>" + "<br>"
+                                 + "D: Rain";
+                                 correctAnswer = 2;
+                                break;
+                        }
+                        break;
+                        
+                    case 6:
+                        switch (question)
+                        {
+                            case 1:
+                                document.getElementById("triviaContainerText").innerHTML = "In this shot, Ki-woo and Ki-jung are __________."
+                                 + "<br>" + "<br>"
+                                 + "A: Searching for Wi-Fi"
+                                 + "<br>" + "<br>"
+                                 + "B: Playing a phone game"
+                                 + "<br>" + "<br>"
+                                 + "C: On a video call"
+                                 + "<br>" + "<br>"
+                                 + "D: Watching a YouTube video";
+                                correctAnswer = 1;
+                                break;
+                            case 2:
+                                document.getElementById("triviaContainerText").innerHTML = "This is a __________ shot."
+                                 + "<br>" + "<br>"
+                                 + "A: Canted-Angle"
+                                 + "<br>" + "<br>"
+                                 + "B: High-Angle"
+                                 + "<br>" + "<br>"
+                                 + "C: Two"
+                                 + "<br>" + "<br>"
+                                 + "D: POV";
+                                 correctAnswer = 3;
+                                break;
+                            case 3:
+                                document.getElementById("triviaContainerText").innerHTML = "This shot has a slight __________, to emphasize how disgusting the Kim's home is."
+                                 + "<br>" + "<br>"
+                                 + "A: Canted-Angle"
+                                 + "<br>" + "<br>"
+                                 + "B: Greenish-Tint"
+                                 + "<br>" + "<br>"
+                                 + "C: Swish Pan"
+                                 + "<br>" + "<br>"
+                                 + "D: Redish-Tint";
+                                 correctAnswer = 2;
+                                break;
+                        }
+                        break;
+                }
+            }
+            function exhibitImg(exhibit)
+            {
+                document.getElementById("exhibitDescriptionContainer").style.display = "block";
+                document.getElementById("exhibitImg").style.backgroundImage = exhibit;
+                document.getElementById("exhibitImg").style.display = "block";
+            }
+            function sleep(ms)
+            {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            async function fadeInfadeOut(fadeIn, isExhibit)
+            {
+                var n = 1;
+                while (n > 0)
+                {
+                    n = n - .01;
+                    document.getElementById("container").style.opacity = n;
+                    await sleep(10);
+                }
+                document.getElementById("container").style.backgroundImage = fadeIn;
+                if (document.getElementById("exhibitContainer").style.display == "block")
+                {
+                    document.getElementById("exhibitContainer").style.display = "none";
+                }
+                if (isExhibit == true)
+                {
+                    document.getElementById("exhibitContainer").style.display = "block";
+                }
+                while (n < 1)
+                {
+                    n = n + .01
+                    document.getElementById("container").style.opacity = n;
+                    await sleep(10);
+                }
+            }
+            async function fadeInfadeOutDescTrivia() //swaps the exhibit description for trivia
+            {
+                var fadeOut;
+                var fadeIn;
+                if (document.getElementById("exhibitDescriptionContainer").style.display == "block" && document.getElementById("triviaContainer").style.display == "none")
+                {
+                    fadeOut = "exhibitDescriptionContainer";
+                    fadeIn = "triviaContainer";
+                    switch (document.getElementById("btn5").onclick)
+                    {
+                        case toR1:
+                            if (isAnswered[0] == 0)
+                            {
+                                triviaQuestion(1);
+                            }
+                            break;
+                        case toR2:
+                            if (isAnswered[1] == 0)
+                            {
+                                triviaQuestion(2);
+                            }
+                            break;
+                        case toR3:
+                            if (isAnswered[2] == 0)
+                            {
+                                triviaQuestion(3);
+                            }
+                            break;
+                        case toR4:
+                            if (isAnswered[3] == 0)
+                            {
+                                triviaQuestion(4);
+                            }
+                            break;
+                        case toR5:
+                            if (isAnswered[4] == 0)
+                            {
+                                triviaQuestion(5);
+                            }
+                            break;
+                        case toR6:
+                            if (isAnswered[5] == 0)
+                            {
+                                triviaQuestion(6);
+                            }
+                            break;
+                    }
+                    toggleTriviaDescButton("Desc");
+                }
+                else
+                {
+                    if (document.getElementById("exhibitDescriptionContainer").style.display == "none" && document.getElementById("triviaContainer").style.display == "block")
+                    {
+                        fadeOut = "triviaContainer";
+                        fadeIn = "exhibitDescriptionContainer";
+                        toggleTriviaDescButton("Trivia");
+                    }
+                    else
+                    {
+                        fadeOut = "exhibitDescriptionContainer";
+                        fadeIn = "triviaContainer";
+                        toggleTriviaDescButton("Desc");
+                    }
+                }
+                var n = 1;
+                while (n > 0)
+                {
+                    n = n - .01;
+                    document.getElementById(fadeOut).style.opacity = n;
+                    await sleep(10);
+                }
+                document.getElementById(fadeOut).style.display = "none";
+                document.getElementById(fadeOut).style.opacity = 1;
+                document.getElementById(fadeIn).style.opacity = 0;
+                document.getElementById(fadeIn).style.display = "block";
+                while (n < 1)
+                {
+                    n = n + .01
+                    document.getElementById(fadeIn).style.opacity = n;
+                    await sleep(10);
+                }
+            }
+
+            async function toggleTriviaDescButton(whatToChangeTo)
+            {
+                await sleep(2500);
+                document.getElementById("btn1").innerHTML = whatToChangeTo;
+            }
+
+            function exitButton(target)
+            {
+                document.getElementById("btn5").onclick = target;
+                document.getElementById("btn5").style.display = "block";
+                document.getElementById("btn5").style.marginLeft = "445px";
+                document.getElementById("btn5").style.marginTop = "510px";
+                document.getElementById("btn5").innerHTML = "Exit";
+            }
+
+            function changeButton(button, target, display, left, top, innerHTML)
+            {
+                document.getElementById(button).onclick = target;
+                document.getElementById(button).style.display = display;
+                document.getElementById(button).style.marginLeft = left;
+                document.getElementById(button).style.marginTop = top;
+                document.getElementById(button).innerHTML = innerHTML;
+            }
+
+            async function toHallway()
+            {
+                vanishAll();
+                fadeInfadeOut("url(hallway.jpg)");
+                await sleep(2500);
+
+                exitButton(toOutside);
+
+                changeButton("btn1", toR1, "block", "190px", "375px", "Room 1");
+                changeButton("btn2", toR2, "block", "375px", "360px", "Room 2");
+                changeButton("btn3", toR3, "block", "450px", "350px", "Room 3");
+                changeButton("btn4", toR4, "block", "530px", "330px", "Room 4");
+                changeButton("btn6", toR5, "block", "695px", "330px", "Room 5");
+                changeButton("btn7", toR6, "block", "805px", "330px", "Room 6");
+            }
+            async function toR1()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room1.jpg)");
+                await sleep(2500);
+
+                exitButton(toHallway);
+
+                changeButton("btn1", exhibit1, "block", "380px", "300px", "Exhibit 1");
+            }
+            async function exhibit1()
+            {
+                vanishAll();
+                exhibitDescriptionSet(1);
+                document.getElementById("btn5").onclick = toR1;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit1.jpg)");
+                fadeInfadeOut("url(whiteBackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR1);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 1;
+            }
+            async function toR2()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room2.jpg)");
+                await sleep(2500);
+
+                exitButton(toHallway);
+
+                changeButton("btn1", exhibit2, "block", "500px", "225px", "Exhibit 2");
+            }
+            async function exhibit2()
+            {
+                vanishAll();
+                exhibitDescriptionSet(2);
+                document.getElementById("btn5").onclick = toR2;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit2.png)");
+                fadeInfadeOut("url(whitebackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR2);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 2;
+            }
+            async function toR3()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room3.jpg)");
+
+                await sleep(2500);
+                exitButton(toHallway);
+                changeButton("btn1", exhibit3, "block", "450px", "300px", "Exhibit 3");
+            }
+            async function exhibit3()
+            {
+                vanishAll();
+                exhibitDescriptionSet(3);
+                document.getElementById("btn5").onclick = toR3;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit3.png)");
+                fadeInfadeOut("url(whiteBackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR3);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 3;
+            }
+            async function toR4()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room4.jpg)");
+                await sleep(2500);
+
+                exitButton(toHallway);
+
+                changeButton("btn1", exhibit4, "block", "550px", "250px", "Exhibit 4");
+            }
+            async function exhibit4()
+            {
+                vanishAll();
+                exhibitDescriptionSet(4);
+                document.getElementById("btn5").onclick = toR4;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit4.png)");
+                fadeInfadeOut("url(whiteBackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR4);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 4;
+            }
+            async function toR5()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room5.jpg)");
+                await sleep(2500);
+
+                exitButton(toHallway);
+                changeButton("btn1", exhibit5, "block", "445px", "300px", "Exhibit 5");
+            }
+            async function exhibit5()
+            {
+                vanishAll();
+                exhibitDescriptionSet(5);
+                document.getElementById("btn5").onclick = toR5;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit5.png)");
+                fadeInfadeOut("url(whiteBackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR5);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 5;
+            }
+            async function toR6()
+            {
+                vanishAll();
+                fadeInfadeOut("url(room6.jpg)");
+                await sleep(2500);
+
+                exitButton(toHallway);
+                changeButton("btn1", exhibit6, "block", "475px", "325px", "Exhibit 6");
+            }
+            async function exhibit6()
+            {
+                vanishAll();
+                exhibitDescriptionSet(6);
+                document.getElementById("btn5").onclick = toR6;
+                fadeInfadeOutDescTrivia();
+                exhibitImg("url(exhibit6.png)");
+                fadeInfadeOut("url(whiteBackground.jpg)", true);
+
+                await sleep(2500);
+                exitButton(toR6);
+                changeButton("btn1", fadeInfadeOutDescTrivia, "block", "202px", "510px", "Desc");
+                whichQuestion = 6;
+            }
+            async function toOutside()
+            {
+                vanishAll();
+                fadeInfadeOut("url(exterior.jpg)");
+                await sleep(2500);
+
+                changeButton("btn5", toHallway, "block", "445px", "425px", "Enter");
+            }
+            function vanishAll()
+            {
+                document.getElementById("btn1").style.display = "none";
+                document.getElementById("btn2").style.display = "none";
+                document.getElementById("btn3").style.display = "none";
+                document.getElementById("btn4").style.display = "none";
+                document.getElementById("btn5").style.display = "none";
+                document.getElementById("btn6").style.display = "none";
+                document.getElementById("btn7").style.display = "none";
+            }
+            function triviaBtn(choice)
+            {
+                if (isAnswered[whichQuestion - 1] == 0)
+                {
+                    if (correctAnswer == choice)
+                    {
+                        pointCounter = pointCounter + 100;
+                        document.getElementById("pointCounter").innerHTML = "Points: " + pointCounter;
+                        document.getElementById("correctIncorrectbox").innerHTML = "Correct";
+                    }
+                    else
+                    {
+                        document.getElementById("correctIncorrectbox").innerHTML = "Incorrect, the correct answer is " + correct_Answer(correctAnswer);
+                    }
+                    isAnswered[whichQuestion - 1] = 1;
+                }
+                else
+                {
+                    document.getElementById("correctIncorrectbox").innerHTML = "This question has already been answered";
+                }
+            }
+            function correct_Answer(correctAns)
+            {
+                if (correctAns == 1)
+                {
+                    return "A";
+                }
+                else
+                {
+                    if (correctAns == 2)
+                    {
+                        return "B";
+                    }
+                    else
+                    {
+                        if (correctAns == 3)
+                        {
+                            return "C";
+                        }
+                        else
+                        {
+                            if (correctAns == 4)
+                            {
+                                return "D";
+                            }
+                        }
+                    }
+                }
+            }
+
+        </script>
+        <style>
+            #containerDupe
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width:960px;
+                height:540px;
+                border:5px solid black;
+            }
+            #container
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width:960px;
+                height:540px;
+                border:1px solid black;
+                border-width:5px;
+                border-radius:2px;
+                background-image:url(exterior.jpg);
+                opacity:1;
+                font-family:'Courier New', Courier, monospace;
+            }
+            #btn1
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-left:455px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;  
+                display:none;
+                z-index:10;
+            }
+            #btn1:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #btn2
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-left:455px;
+                margin-top:490px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                display:none;  
+            }
+            #btn2:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;  
+            }
+            #btn3
+            {     
+                position:absolute;           
+                width:75px;
+                height:30px;
+                margin-top:245px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                display:none;  
+            }
+            #btn3:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s; 
+            }
+            #btn4
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-top:245px;
+                margin-left:910px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                display:none;  
+            }
+            #btn4:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s; 
+            }
+            #btn5
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-top:425px;
+                margin-left:445px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                z-index:10;
+            }
+            #btn5:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #btn6
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-top:425px;
+                margin-left:445px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                display:none;
+            }
+            #btn6:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #btn7
+            {
+                position:absolute;
+                width:75px;
+                height:30px;
+                margin-top:425px;
+                margin-left:445px;
+                background-color:white;
+                color:black;
+                border-radius:5px;
+                border-color:black;
+                border-width:5px;
+                text-align:center;
+                display:none;
+            }
+            #btn7:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #pointCounter
+            {
+                margin-bottom:0px;
+                margin-top:0px;
+                margin-left:0px;
+                margin-right:0px;
+            }
+            #pointCounterContainer
+            {
+                position:absolute;
+                height:30px;
+                width:125px;
+                background-color:white;
+                border:1px solid black;
+                border-radius:5px;
+                padding-top:10px;
+                padding-left:5px;
+                z-index:10;
+            }
+            #exhibitDescriptionContainer
+            {
+                padding:5px;
+                height:540px;
+                width:480px;
+                position:absolute;
+                display:none;
+            }
+            #exhibitDescription
+            {
+                font-family:'Times New Roman', Times, serif;
+                color:black;
+                margin-top:100px;
+                margin-left:10px;
+                margin-right:10px;
+            }
+            #exhibitImg
+            {
+                height:540px;
+                width:480px;
+                position:absolute;
+                display:none;
+                margin-left:480px;
+            }
+
+            #triviaContainer
+            {
+                padding:5px;
+                height:540px;
+                width:480px;
+                position:absolute;
+                display:none;
+            }
+            #triviaContainerText
+            {
+                font-family: 'Times New Roman', Times, serif;
+                text-align:center;
+                margin-top:100px;
+                margin-left:10px;
+                margin-right:10px;
+            }
+            #triviaBtn1
+            {
+                border: 5px solid black;
+                border-radius: 5px;
+                background-color:white;
+                color:black;
+                text-align:center;
+                width:220px;
+                height:50px;
+                position:absolute;
+                margin-left:15px;
+            }
+            #triviaBtn1:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #triviaBtn2
+            {
+                border: 5px solid black;
+                border-radius: 5px;
+                background-color:white;
+                color:black;
+                text-align:center;
+                width:220px;
+                height:50px;
+                position:absolute;
+                margin-left:235px;
+            }
+            #triviaBtn2:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #triviaBtn3
+            {
+                border: 5px solid black;
+                border-radius: 5px;
+                background-color:white;
+                color:black;
+                text-align:center;
+                width:220px;
+                height:50px;
+                position:absolute;
+                margin-left:15px;
+                margin-top:50px;
+            }
+            #triviaBtn3:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #triviaBtn4
+            {
+                border: 5px solid black;
+                border-radius: 5px;
+                background-color:white;
+                color:black;
+                text-align:center;
+                width:220px;
+                height:50px;
+                position:absolute;
+                margin-left:235px;
+                margin-top:50px;
+            }
+            #triviaBtn4:hover
+            {
+                background-color:black;
+                color:white;
+                transition:0.3s;
+            }
+            #exhibitContainer
+            {
+                position:relative;
+                display:none;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Film Mueseum</h1>
+        <br>
+        <div id="containerDupe">
+            <div id="pointCounterContainer">
+                <p id="pointCounter">Points: 0</p>
+            </div>
+        </div>
+        <div id="container">
+            <button id="btn1"></button>
+            <button id="btn2"></button>
+            <button id="btn3"></button>
+            <button id="btn4"></button>
+            <button id="btn5" onclick="toHallway()">Enter</button>
+            <button id="btn6"></button>
+            <button id="btn7"></button>
+            <div id="exhibitContainer">
+                <div id="exhibitDescriptionContainer">
+                    <p id="exhibitDescription"></p>
+                </div>
+                <div id="exhibitImg">
+                </div>
+                <div id="triviaContainer">
+                    <p id="triviaContainerText">
+                    </p>
+                    <br>
+                    <p id="correctIncorrectbox">
+                    </p>
+                    <br>
+                    <button id="triviaBtn1" onclick="triviaBtn(1)">A</button>
+                    <button id="triviaBtn2" onclick="triviaBtn(2)">B</button>
+                    <button id="triviaBtn3" onclick="triviaBtn(3)">C</button>
+                    <button id="triviaBtn4" onclick="triviaBtn(4)">D</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
